@@ -1,0 +1,1 @@
+Cuando se realiza un POST /reportes se registra un nuevo reporte en el servidor. La respuesta muestra el mensaje “Reporte registrado” y los datos enviados.

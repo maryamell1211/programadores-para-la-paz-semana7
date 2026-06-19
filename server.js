@@ -5,14 +5,11 @@ app.use(express.json());
 
 let reportes = [];
 
-// GET
 app.get('/reportes', (req, res) => {
   res.json(reportes);
 });
 
-// POST (ESTO ES LO QUE BORRASTE O PERDISTE)
 app.post('/reportes', (req, res) => {
-
   const reporte = {
     id: reportes.length + 1,
     tipo: req.body.tipo,
@@ -23,12 +20,10 @@ app.post('/reportes', (req, res) => {
 
   res.json({
     mensaje: "Reporte registrado",
-    reporte
+    reporte: reporte
   });
-
 });
 
-// SERVIDOR
 app.listen(3000, () => {
   console.log('Servidor ejecutándose en puerto 3000');
 });
